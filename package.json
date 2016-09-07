@@ -4,11 +4,11 @@
   "description": "A simple node module which provides one liner joke randomly and from specific category",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faiyaz26/one-liner-joke.git"
+    "url": "git@github.com:faiyaz26/one-liner-joke.git"
   },
   "keywords": [
     "joke",
@@ -18,10 +18,14 @@
     "jokes",
     "lol"
   ],
-  "author": "Ahmad Faiyaz",
+  "author": "Ahmad Faiyaz <faiyaz26@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/faiyaz26/one-liner-joke/issues"
   },
-  "homepage": "https://github.com/faiyaz26/one-liner-joke#readme"
+  "homepage": "https://github.com/faiyaz26/one-liner-joke#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0"
+  }
 }
