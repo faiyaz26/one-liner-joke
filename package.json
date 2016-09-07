@@ -1,0 +1,27 @@
+{
+  "name": "one-liner-joke",
+  "version": "1.0.0",
+  "description": "A simple node module which provides one liner joke randomly and from specific category",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faiyaz26/one-liner-joke.git"
+  },
+  "keywords": [
+    "joke",
+    "funny",
+    "one-liner",
+    "humor",
+    "jokes",
+    "lol"
+  ],
+  "author": "Ahmad Faiyaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faiyaz26/one-liner-joke/issues"
+  },
+  "homepage": "https://github.com/faiyaz26/one-liner-joke#readme"
+}
