@@ -1,4 +1,4 @@
-var oneLinerJoke = require('../index.js');
+var oneLinerJoke = require('../index.js'); // in your code it should be "require('one-liner-joke');" without quote
 
 
 /*
