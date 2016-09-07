@@ -41,4 +41,8 @@ function getRandomJokeWithTag(tag){
     return jokesWithTag[idx];
 }
 
-module.exports = {getRandomJoke, getAllJokesWithTag, getRandomJokeWithTag};
+module.exports = {
+    getRandomJoke : getRandomJoke,
+    getAllJokesWithTag: getAllJokesWithTag, 
+    getRandomJokeWithTag: getRandomJokeWithTag
+};

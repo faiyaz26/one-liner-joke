@@ -1,5 +1,8 @@
 # one-liner-joke
+[![Build Status](https://api.travis-ci.org/faiyaz26/one-liner-joke.svg?branch=master)](https://travis-ci.org/faiyaz26/one-liner-joke)
 A simple Node Module which can provide one line joke randomly or from specific tag
+
+
 
 ### Installation
 ```
