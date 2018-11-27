@@ -8,12 +8,28 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getRandomJoke(){
+
+exclude_tags_default = ['racist', 'dirty', 'sex']
+
+function getRandomJoke(exclude_tags=exclude_tags_default){
     const min = 0;
     const max = jokes.length - 1;
-    const idx = getRandomInt(min, max);
 
-    return jokes[idx];
+    while(true){
+        const idx = getRandomInt(min, max);
+        let joke = jokes[idx];
+        let flagged = 0;
+        for(let i = 0; i < exclude_tags.length; i++){
+            if(joke.tags.indexOf(exclude_tags[i]) > 0){
+                flagged = 1;
+            }
+        }
+
+        if(flagged === 0){
+            return joke;
+        }
+    }
+    return null;
 }
 
 function getAllJokesWithTag(tag){
@@ -27,7 +43,7 @@ function getAllJokesWithTag(tag){
     return jokesWithTag;
 }
 
-function getRandomJokeWithTag(tag){
+function getRandomJokeWithTag(tag, exclude_tags=exclude_tags_default){
     var jokesWithTag = getAllJokesWithTag(tag);
 
     if(jokesWithTag.length == 0){
@@ -36,9 +52,21 @@ function getRandomJokeWithTag(tag){
 
     const min = 0;
     const max = jokesWithTag.length - 1;
-    const idx = getRandomInt(min, max);
+    while(true){
+        const idx = getRandomInt(min, max);
+        let joke = jokesWithTag[idx];
+        let flagged = 0;
+        for(let i = 0; i < exclude_tags.length; i++){
+            if(joke.tags.indexOf(exclude_tags[i]) > 0){
+                flagged = 1;
+            }
+        }
 
-    return jokesWithTag[idx];
+        if(flagged === 0){
+            return joke;
+        }
+    }
+    return null;
 }
 
 module.exports = {
