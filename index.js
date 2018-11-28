@@ -11,10 +11,12 @@ function getRandomInt(min, max) {
 
 exclude_tags_default = ['racist', 'dirty', 'sex']
 
-function getRandomJoke(exclude_tags=exclude_tags_default){
+function getRandomJoke(options={
+    'exclude_tags': exclude_tags_default
+}){
     const min = 0;
     const max = jokes.length - 1;
-
+    const exclude_tags = options['exclude_tags'];
     while(true){
         const idx = getRandomInt(min, max);
         let joke = jokes[idx];
@@ -43,9 +45,12 @@ function getAllJokesWithTag(tag){
     return jokesWithTag;
 }
 
-function getRandomJokeWithTag(tag, exclude_tags=exclude_tags_default){
+function getRandomJokeWithTag(tag, options={
+    'exclude_tags': exclude_tags_default
+}){
     var jokesWithTag = getAllJokesWithTag(tag);
-
+    const exclude_tags = options['exclude_tags'];
+    
     if(jokesWithTag.length == 0){
         return {'body' : '', 'tags' : []};
     }

@@ -18,8 +18,7 @@ npm install one-liner-joke --save
 ### Usage
 
 ```
-var oneLinerJoke = require('../index.js'); // in your code it should be "require('one-liner-joke');" without quote
-
+var oneLinerJoke = require('one-liner-joke');
 
 /*
 The variable getRandomJoke will contain a random joke with a format:
@@ -29,10 +28,12 @@ var getRandomJoke = oneLinerJoke.getRandomJoke();
 console.log(getRandomJoke)
 
 /*
-One can add exclusion filter for the jokes
+One can add exclusion filter for the jokes tags
 default is ['racist', 'dirty', 'sex']
 */
-var getRandomJoke = oneLinerJoke.getRandomJoke(['dirty', 'racist', 'marriage']);
+var getRandomJoke = oneLinerJoke.getRandomJoke({
+    'exclude_tags': ['dirty', 'racist', 'marriage']
+  });
 console.log(getRandomJoke)
 
 
@@ -45,10 +46,12 @@ var getRandomJokeWithTag = oneLinerJoke.getRandomJokeWithTag('stupid');
 console.log(getRandomJokeWithTag)
 
 /*
-One can add exclusion filter for the jokes
+One can add exclusion filter for the jokes tags
 default is ['racist', 'dirty', 'sex']
 */
-var getRandomJoke = oneLinerJoke.getRandomJokeWithTag('stupid', ['dirty', 'racist', 'marriage']);
+var getRandomJoke = oneLinerJoke.getRandomJokeWithTag('stupid', {
+  'exclude_tags': ['dirty', 'racist', 'marriage']
+});
 console.log(getRandomJoke)
 
 ```
