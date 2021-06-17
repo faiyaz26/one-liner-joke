@@ -62,7 +62,7 @@ function getRandomJokeWithTag(tag, options={
         let joke = jokesWithTag[idx];
         let flagged = 0;
         for(let i = 0; i < exclude_tags.length; i++){
-            if(joke.tags.indexOf(exclude_tags[i]) > 0){
+            if(joke.tags.indexOf(exclude_tags[i]) > -1){
                 flagged = 1;
             }
         }
