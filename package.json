@@ -1,6 +1,6 @@
 {
   "name": "one-liner-joke",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple node module which provides one liner joke randomly and from specific category",
   "main": "index.js",
   "scripts": {
