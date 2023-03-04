@@ -29,6 +29,6 @@
   "homepage": "https://github.com/faiyaz26/one-liner-joke#readme",
   "devDependencies": {
     "chai": "^3.2.0",
-    "mocha": "^2.3.0"
+    "mocha": "^10.2.0"
   }
 }
